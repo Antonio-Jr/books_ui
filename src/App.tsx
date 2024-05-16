@@ -9,13 +9,13 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="flex flex-col w-full items-center justify-center gap-5">
+    <div className="flex flex-col w-full items-center justify-center gap-2">
       <h1>Books UI</h1>
       <Select value={selected} onValueChange={(value) => setSelected(value)}>
-        <SelectTrigger className="rounded-md">
+        <SelectTrigger className="rounded-md border border-slate-500">
           <SelectValue className="rounded-md" placeholder="Search by" />
         </SelectTrigger>
-        <SelectContent className="bg-primary bg-zinc-900">
+        <SelectContent className="shadow-sm bg-slate-50 border border-slate-500 dark:bg-zinc-900">
           <SelectItem value="title">Title</SelectItem>
           <SelectItem value="author">Author</SelectItem>
           <SelectItem value="category">Category</SelectItem>
@@ -23,7 +23,7 @@ function App() {
       </Select>
 
       <Input
-        className="w-full rounded-md"
+        className="w-full rounded-md border border-slate-500"
         type="text"
         placeholder="Search"
         onChange={(e) => {
