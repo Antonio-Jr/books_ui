@@ -31,3 +31,4 @@ riderModule.iml
 **/.vs
 **/.vscode
 **/*.log
+.env*
